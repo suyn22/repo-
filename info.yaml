@@ -1,26 +1,19 @@
-# Tiny Tapeout project information
 project:
-  title:        "7 segment seconds (Verilog Demo)"      # Project title
-  author:       "onestwob"      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Count up to 10, one second at a time."      # One line description of what your project does
-  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     10000000       # Clock frequency in Hz (or 0 if not applicable)
+  title:        "7 segment seconds counter (Verilog Demo)"      
+  author:       "Suyn22"      
+  discord:      "suyn22#1234"    
+  description:  "This project implements a seconds counter on a 7-segment display using Verilog. It counts up every second, displaying the value from 0 to 9."
+  language:     "Verilog" 
+  clock_hz:     10000000       
 
-  # How many tiles your design occupies? A single tile is about 167x108 uM.
-  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+  tiles: "1x1"
 
-  # Your top module name must start with "tt_um_". Make it unique by including your github username:
   top_module:  "tt_um_seven_segment_seconds"
 
-  # List your project's source files here.
-  # Source files must be in ./src and you must list each source file separately, one per line.
-  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
     - "project.v"
     - "decoder.v"
 
-# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
   ui[0]: "compare[11]"
@@ -32,7 +25,6 @@ pinout:
   ui[6]: "compare[17]"
   ui[7]: "compare[18]"
 
- 
   # Outputs
   uo[0]: "segment a"
   uo[1]: "segment b"
@@ -53,5 +45,4 @@ pinout:
   uio[6]: "second counter bit 6"
   uio[7]: "second counter bit 7"
   
-# Do not change!
 yaml_version: 6
