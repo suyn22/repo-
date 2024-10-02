@@ -1,4 +1,8 @@
 # Tiny Tapeout project information
+
+title: "My Project Title"
+
+
 project:
   title:        ""      # Project title
   author:       ""      # Your name
